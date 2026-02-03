@@ -1,21 +1,22 @@
 import React from 'react';
+import { IncidentSummaryProps } from './schema';
 
-export interface IncidentSummaryProps {
-  /** Brief, human-readable title of what happened */
-  title: string;
-  /** Current status of the incident */
-  status: 'active' | 'investigating' | 'resolved' | 'monitoring';
-  /** When the incident was first detected */
-  detectedAt: string;
-  /** Primary metric affected (e.g., "Revenue", "Conversions", "Traffic") */
-  affectedMetric: string;
-  /** Magnitude of impact (e.g., "-23%", "$12K loss") */
-  impactMagnitude: string;
-  /** Severity level */
-  severity: 'critical' | 'high' | 'medium' | 'low';
-  /** Optional one-sentence summary */
-  summary?: string;
-}
+// export interface IncidentSummaryProps {
+//   /** Brief, human-readable title of what happened */
+//   title: string;
+//   /** Current status of the incident */
+//   status: 'active' | 'investigating' | 'resolved' | 'monitoring';
+//   /** When the incident was first detected */
+//   detectedAt: string;
+//   /** Primary metric affected (e.g., "Revenue", "Conversions", "Traffic") */
+//   affectedMetric: string;
+//   /** Magnitude of impact (e.g., "-23%", "$12K loss") */
+//   impactMagnitude: string;
+//   /** Severity level */
+//   severity: 'critical' | 'high' | 'medium' | 'low';
+//   /** Optional one-sentence summary */
+//   summary?: string;
+// }
 
 export const IncidentSummary: React.FC<IncidentSummaryProps> = ({
   title,

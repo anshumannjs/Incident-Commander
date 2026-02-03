@@ -1,24 +1,25 @@
 import React from 'react';
+import { FunnelDiffProps } from './schema';
 
-export interface FunnelStage {
-  /** Stage identifier */
-  id: string;
-  /** Stage name (e.g., "Landing", "Add to Cart", "Checkout") */
-  name: string;
-  /** Current conversion rate or count */
-  current: string;
-  /** Previous conversion rate or count */
-  previous: string;
-  /** Whether this stage has a significant drop */
-  hasIssue: boolean;
-}
+// export interface FunnelStage {
+//   /** Stage identifier */
+//   id: string;
+//   /** Stage name (e.g., "Landing", "Add to Cart", "Checkout") */
+//   name: string;
+//   /** Current conversion rate or count */
+//   current: string;
+//   /** Previous conversion rate or count */
+//   previous: string;
+//   /** Whether this stage has a significant drop */
+//   hasIssue: boolean;
+// }
 
-export interface FunnelDiffProps {
-  /** List of funnel stages in order */
-  stages: FunnelStage[];
-  /** Optional header text */
-  header?: string;
-}
+// export interface FunnelDiffProps {
+//   /** List of funnel stages in order */
+//   stages: FunnelStage[];
+//   /** Optional header text */
+//   header?: string;
+// }
 
 export const FunnelDiff: React.FC<FunnelDiffProps> = ({
   stages,

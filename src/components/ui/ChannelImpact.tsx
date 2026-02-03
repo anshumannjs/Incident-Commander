@@ -1,22 +1,23 @@
 import React from 'react';
+import { ChannelImpactProps } from './schema';
 
-export interface Channel {
-  /** Channel identifier */
-  id: string;
-  /** Channel name (e.g., "Paid Search", "Email", "Direct") */
-  name: string;
-  /** Impact severity on this channel */
-  impactLevel: 'severe' | 'moderate' | 'minor' | 'none';
-  /** Change in metric (e.g., "-45%", "$3K loss") */
-  change: string;
-}
+// export interface Channel {
+//   /** Channel identifier */
+//   id: string;
+//   /** Channel name (e.g., "Paid Search", "Email", "Direct") */
+//   name: string;
+//   /** Impact severity on this channel */
+//   impactLevel: 'severe' | 'moderate' | 'minor' | 'none';
+//   /** Change in metric (e.g., "-45%", "$3K loss") */
+//   change: string;
+// }
 
-export interface ChannelImpactProps {
-  /** List of channels with their impact levels */
-  channels: Channel[];
-  /** Optional header text */
-  header?: string;
-}
+// export interface ChannelImpactProps {
+//   /** List of channels with their impact levels */
+//   channels: Channel[];
+//   /** Optional header text */
+//   header?: string;
+// }
 
 export const ChannelImpact: React.FC<ChannelImpactProps> = ({
   channels,
