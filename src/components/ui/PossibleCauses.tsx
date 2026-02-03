@@ -1,22 +1,23 @@
 import React from 'react';
+import { PossibleCausesProps } from './schema';
 
-export interface Cause {
-  /** Unique identifier */
-  id: string;
-  /** Human-readable description of the cause */
-  description: string;
-  /** Confidence level (0-100) */
-  confidence: number;
-  /** Optional supporting evidence */
-  evidence?: string;
-}
+// export interface Cause {
+//   /** Unique identifier */
+//   id: string;
+//   /** Human-readable description of the cause */
+//   description: string;
+//   /** Confidence level (0-100) */
+//   confidence: number;
+//   /** Optional supporting evidence */
+//   evidence?: string;
+// }
 
-export interface PossibleCausesProps {
-  /** List of potential causes */
-  causes: Cause[];
-  /** Optional header text */
-  header?: string;
-}
+// export interface PossibleCausesProps {
+//   /** List of potential causes */
+//   causes: Cause[];
+//   /** Optional header text */
+//   header?: string;
+// }
 
 export const PossibleCauses: React.FC<PossibleCausesProps> = ({
   causes,

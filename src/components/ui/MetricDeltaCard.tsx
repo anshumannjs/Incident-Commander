@@ -1,21 +1,22 @@
 import React from 'react';
+import { MetricDeltaCardProps } from './schema';
 
-export interface MetricDeltaCardProps {
-  /** Name of the metric (e.g., "Revenue", "Conversion Rate") */
-  metricName: string;
-  /** Previous value */
-  before: string;
-  /** Current value */
-  after: string;
-  /** Change amount (e.g., "-23%", "-$12K") */
-  delta: string;
-  /** Direction of change */
-  direction: 'up' | 'down' | 'neutral';
-  /** Whether this change is bad (true) or good (false) */
-  isNegative: boolean;
-  /** Time period for comparison (e.g., "vs. last week") */
-  comparisonPeriod?: string;
-}
+// export interface MetricDeltaCardProps {
+//   /** Name of the metric (e.g., "Revenue", "Conversion Rate") */
+//   metricName: string;
+//   /** Previous value */
+//   before: string;
+//   /** Current value */
+//   after: string;
+//   /** Change amount (e.g., "-23%", "-$12K") */
+//   delta: string;
+//   /** Direction of change */
+//   direction: 'up' | 'down' | 'neutral';
+//   /** Whether this change is bad (true) or good (false) */
+//   isNegative: boolean;
+//   /** Time period for comparison (e.g., "vs. last week") */
+//   comparisonPeriod?: string;
+// }
 
 export const MetricDeltaCard: React.FC<MetricDeltaCardProps> = ({
   metricName,

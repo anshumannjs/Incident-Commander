@@ -1,19 +1,20 @@
 import React from 'react';
+import { ActionPreviewProps } from './schema';
 
-export interface ActionPreviewProps {
-  /** Name of the action being previewed */
-  actionName: string;
-  /** Projected outcome description */
-  outcome: string;
-  /** Estimated time to see results (e.g., "2-4 hours", "1 day") */
-  timeToImpact: string;
-  /** Projected metric change (e.g., "+15%", "$8K recovery") */
-  projectedChange?: string;
-  /** Risk level */
-  risk: 'low' | 'medium' | 'high';
-  /** Optional additional context or warnings */
-  notes?: string;
-}
+// export interface ActionPreviewProps {
+//   /** Name of the action being previewed */
+//   actionName: string;
+//   /** Projected outcome description */
+//   outcome: string;
+//   /** Estimated time to see results (e.g., "2-4 hours", "1 day") */
+//   timeToImpact: string;
+//   /** Projected metric change (e.g., "+15%", "$8K recovery") */
+//   projectedChange?: string;
+//   /** Risk level */
+//   risk: 'low' | 'medium' | 'high';
+//   /** Optional additional context or warnings */
+//   notes?: string;
+// }
 
 export const ActionPreview: React.FC<ActionPreviewProps> = ({
   actionName,
