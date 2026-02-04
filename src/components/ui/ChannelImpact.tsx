@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChannelImpactProps } from './schema';
+import React from "react";
+import { ChannelImpactProps } from "./schema";
 
 // export interface Channel {
 //   /** Channel identifier */
@@ -21,34 +21,36 @@ import { ChannelImpactProps } from './schema';
 
 export const ChannelImpact: React.FC<ChannelImpactProps> = ({
   channels,
-  header = 'Channel Impact',
+  header = "Channel Impact",
 }) => {
   const impactStyles = {
-    severe: 'bg-red-100 border-red-400 text-red-900',
-    moderate: 'bg-orange-100 border-orange-400 text-orange-900',
-    minor: 'bg-yellow-100 border-yellow-400 text-yellow-900',
-    none: 'bg-gray-100 border-gray-300 text-gray-600',
+    severe: "bg-red-100 border-red-400 text-red-900",
+    moderate: "bg-orange-100 border-orange-400 text-orange-900",
+    minor: "bg-yellow-100 border-yellow-400 text-yellow-900",
+    none: "bg-gray-100 border-gray-300 text-gray-600",
   };
 
   const impactLabels = {
-    severe: 'Severe Impact',
-    moderate: 'Moderate Impact',
-    minor: 'Minor Impact',
-    none: 'No Impact',
+    severe: "Severe Impact",
+    moderate: "Moderate Impact",
+    minor: "Minor Impact",
+    none: "No Impact",
   };
 
   // Sort by impact severity
-  const sortedChannels = [...channels].sort((a, b) => {
-    const order = { severe: 0, moderate: 1, minor: 2, none: 3 };
-    return order[a.impactLevel] - order[b.impactLevel];
-  });
+  const sortedChannels =
+    channels &&
+    [...channels].sort((a, b) => {
+      const order = { severe: 0, moderate: 1, minor: 2, none: 3 };
+      return order[a.impactLevel] - order[b.impactLevel];
+    });
 
   return (
     <div className="bg-white rounded-lg border border-gray-300 p-5">
       <h3 className="text-lg font-semibold mb-4 text-gray-900">{header}</h3>
 
       <div className="space-y-2">
-        {sortedChannels.map((channel) => (
+        {sortedChannels?.map((channel) => (
           <div
             key={channel.id}
             className={`rounded-lg border-2 p-4 ${impactStyles[channel.impactLevel]}`}

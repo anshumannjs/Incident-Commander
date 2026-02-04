@@ -1,5 +1,5 @@
-import React from 'react';
-import { PossibleCausesProps } from './schema';
+import React from "react";
+import { PossibleCausesProps } from "./schema";
 
 // export interface Cause {
 //   /** Unique identifier */
@@ -21,18 +21,18 @@ import { PossibleCausesProps } from './schema';
 
 export const PossibleCauses: React.FC<PossibleCausesProps> = ({
   causes,
-  header = 'Possible Causes',
+  header = "Possible Causes",
 }) => {
   const getConfidenceLabel = (confidence: number) => {
-    if (confidence >= 80) return 'High confidence';
-    if (confidence >= 50) return 'Medium confidence';
-    return 'Low confidence';
+    if (confidence >= 80) return "High confidence";
+    if (confidence >= 50) return "Medium confidence";
+    return "Low confidence";
   };
 
   const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 80) return 'bg-purple-100 text-purple-800';
-    if (confidence >= 50) return 'bg-blue-100 text-blue-800';
-    return 'bg-gray-100 text-gray-600';
+    if (confidence >= 80) return "bg-purple-100 text-purple-800";
+    if (confidence >= 50) return "bg-blue-100 text-blue-800";
+    return "bg-gray-100 text-gray-600";
   };
 
   return (
@@ -40,18 +40,15 @@ export const PossibleCauses: React.FC<PossibleCausesProps> = ({
       <h3 className="text-lg font-semibold mb-4 text-gray-900">{header}</h3>
 
       <div className="space-y-3">
-        {causes.map((cause) => (
-          <div
-            key={cause.id}
-            className="border-l-4 border-gray-300 pl-4 py-2"
-          >
+        {causes?.map((cause) => (
+          <div key={cause.id} className="border-l-4 border-gray-300 pl-4 py-2">
             <div className="flex items-start justify-between gap-3 mb-1">
               <p className="font-medium text-gray-900 flex-1">
                 {cause.description}
               </p>
               <span
                 className={`px-2 py-1 rounded text-xs font-medium whitespace-nowrap ${getConfidenceColor(
-                  cause.confidence
+                  cause.confidence,
                 )}`}
               >
                 {getConfidenceLabel(cause.confidence)}
