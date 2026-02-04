@@ -1,5 +1,5 @@
-import React from 'react';
-import { FunnelDiffProps } from './schema';
+import React from "react";
+import { FunnelDiffProps } from "./schema";
 
 // export interface FunnelStage {
 //   /** Stage identifier */
@@ -23,20 +23,20 @@ import { FunnelDiffProps } from './schema';
 
 export const FunnelDiff: React.FC<FunnelDiffProps> = ({
   stages,
-  header = 'Funnel Breakdown',
+  header = "Funnel Breakdown",
 }) => {
   return (
     <div className="bg-white rounded-lg border border-gray-300 p-5">
       <h3 className="text-lg font-semibold mb-4 text-gray-900">{header}</h3>
 
       <div className="space-y-3">
-        {stages.map((stage, index) => (
+        {stages?.map((stage, index) => (
           <div key={stage.id}>
             <div
               className={`rounded-lg p-4 ${
                 stage.hasIssue
-                  ? 'bg-red-50 border-2 border-red-400'
-                  : 'bg-gray-50 border border-gray-300'
+                  ? "bg-red-50 border-2 border-red-400"
+                  : "bg-gray-50 border border-gray-300"
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -46,7 +46,7 @@ export const FunnelDiff: React.FC<FunnelDiffProps> = ({
                   </span>
                   <span
                     className={`font-semibold ${
-                      stage.hasIssue ? 'text-red-900' : 'text-gray-900'
+                      stage.hasIssue ? "text-red-900" : "text-gray-900"
                     }`}
                   >
                     {stage.name}
@@ -64,7 +64,7 @@ export const FunnelDiff: React.FC<FunnelDiffProps> = ({
                   <div className="text-xs text-gray-600 mb-0.5">Now</div>
                   <div
                     className={`text-2xl font-bold ${
-                      stage.hasIssue ? 'text-red-900' : 'text-gray-900'
+                      stage.hasIssue ? "text-red-900" : "text-gray-900"
                     }`}
                   >
                     {stage.current}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface Action {
   /** Unique identifier */
@@ -10,7 +10,7 @@ export interface Action {
   /** Estimated impact (e.g., "Could recover 15%", "Low risk") */
   impact?: string;
   /** Priority level */
-  priority: 'high' | 'medium' | 'low';
+  priority: "high" | "medium" | "low";
 }
 
 export interface SuggestedActionsProps {
@@ -25,18 +25,18 @@ export interface SuggestedActionsProps {
 export const SuggestedActions: React.FC<SuggestedActionsProps> = ({
   actions,
   onActionSelect,
-  header = 'Suggested Actions',
+  header = "Suggested Actions",
 }) => {
   const priorityStyles = {
-    high: 'border-red-300 bg-red-50 hover:bg-red-100',
-    medium: 'border-yellow-300 bg-yellow-50 hover:bg-yellow-100',
-    low: 'border-blue-300 bg-blue-50 hover:bg-blue-100',
+    high: "border-red-300 bg-red-50 hover:bg-red-100",
+    medium: "border-yellow-300 bg-yellow-50 hover:bg-yellow-100",
+    low: "border-blue-300 bg-blue-50 hover:bg-blue-100",
   };
 
   const priorityLabels = {
-    high: 'High Priority',
-    medium: 'Medium Priority',
-    low: 'Low Priority',
+    high: "High Priority",
+    medium: "Medium Priority",
+    low: "Low Priority",
   };
 
   return (
@@ -44,7 +44,7 @@ export const SuggestedActions: React.FC<SuggestedActionsProps> = ({
       <h3 className="text-lg font-semibold mb-4 text-gray-900">{header}</h3>
 
       <div className="space-y-3">
-        {actions.map((action) => (
+        {actions?.map((action) => (
           <button
             key={action.id}
             onClick={() => onActionSelect(action.id)}

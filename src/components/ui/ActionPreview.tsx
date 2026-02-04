@@ -1,5 +1,5 @@
-import React from 'react';
-import { ActionPreviewProps } from './schema';
+import React from "react";
+import { ActionPreviewProps } from "./schema";
 
 // export interface ActionPreviewProps {
 //   /** Name of the action being previewed */
@@ -25,19 +25,19 @@ export const ActionPreview: React.FC<ActionPreviewProps> = ({
   notes,
 }) => {
   const riskColors = {
-    low: 'text-green-700 bg-green-100',
-    medium: 'text-yellow-700 bg-yellow-100',
-    high: 'text-red-700 bg-red-100',
+    low: "text-green-700 bg-green-100",
+    medium: "text-yellow-700 bg-yellow-100",
+    high: "text-red-700 bg-red-100",
   };
 
   const riskLabels = {
-    low: 'Low Risk',
-    medium: 'Medium Risk',
-    high: 'High Risk',
+    low: "Low Risk",
+    medium: "Medium Risk",
+    high: "High Risk",
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg border-2 border-indigo-300 p-6">
+    <div className="bg-linear-to-br from-indigo-50 to-blue-50 rounded-lg border-2 border-indigo-300 p-6">
       <div className="flex items-start justify-between mb-4">
         <div>
           <div className="text-xs uppercase tracking-wide text-indigo-600 font-semibold mb-1">
